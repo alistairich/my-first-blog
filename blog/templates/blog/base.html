@@ -7,16 +7,21 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
-    <body>
+    <body style="background-color: rgb(250, 250, 250)">
         <div class="page-header">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                <a href="{% url 'post_new' %}" class="top-menu">Add Post</span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"; title='Draft'></span></a>
                 <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% else %}
-                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                <a href="{% url 'login' %}" class="top-menu">Login</a>
+                <a href="{% url 'signup' %}" class="top-menu">Signup</a>
             {% endif %}
-            <h1><a href="/">Juddy Ann's Tips</a></h1>
+            <h1 style="color: rgb(250, 250, 250);font-size: 180%; font-weight: bold;"><a href="/"> JJAA </a></h1>
+            <h1 style="text-align: left; font-size: 100%; font-weight: arial; color: #027376" class="top-menu"><a href=""><mark> Contact us </mark></a></h1>
+            <h1 style="text-align: left; font-size: 100%; font-family: arial;" class="top-menu"><a href=""><mark> About </mark></a></h1>
+            <h1 style="text-align: left; font-size: 100%; font-family: arial;" class="top-menu"><a href=""><mark> Gallery </mark></a></h1>
+            <h1 style="text-align: left; font-size: 100%; font-family: arial;" class="top-menu"><a href="/"><mark> Home </mark></a></h1>
         </div>
         <div class="content container">
             <div class="row">
