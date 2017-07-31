@@ -5,8 +5,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
-    text = RichTextUploadingField('texts')
+    #text = models.TextField('texts')
     title = models.CharField(max_length=200)
+    text = RichTextUploadingField()
     author = models.ForeignKey('auth.User')
     
     def publish(self):

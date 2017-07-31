@@ -27,7 +27,7 @@ DEBUG = True
 
 LOGIN_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['192.168.254.102', 'alistairich.pythonanywhere.com']
+ALLOWED_HOSTS = ['192.168.254.101', 'alistairich.pythonanywhere.com']
 
 
 # Application definition
@@ -135,13 +135,13 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 CKEDITOR_RESTRICT_BY_USER = True
-CKEDITOR_UPLOAD_SLUGIFY_FILENAME = True
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Advanced',
+        'toolbar': 'full',
         'width': 1000,
         'height': 300,
         'allowedContent': True,
@@ -149,4 +149,3 @@ CKEDITOR_CONFIGS = {
 }
 ###################################
 
-DJANGO_SETTINGS_MODULE='testtinymce.settings'
