@@ -3,7 +3,7 @@
 {% load wysiwyg %}
 
 {% block content %}
-    <h1>New post</h1>
+    <h1 style="font-size: 150%">New post</h1>
     
     <form method="POST" class="post-form">{% csrf_token %}
     	{{ form.media }}
