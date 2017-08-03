@@ -6,6 +6,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     #text = models.TextField('texts')
+    image = models.FileField(null=True, blank=True)
     title = models.CharField(max_length=200)
     text = RichTextUploadingField()
     author = models.ForeignKey('auth.User')
