@@ -27,7 +27,7 @@ DEBUG = True
 
 LOGIN_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['192.168.254.103', 'alistairich.pythonanywhere.com']
+ALLOWED_HOSTS = ['192.168.254.102', 'alistairich.pythonanywhere.com']
 
 
 # Application definition

@@ -13,7 +13,7 @@ body {
 */
 
 .page-header{
-	background-color: #010F0E;
+	background-color: #6960EC;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -112,7 +112,7 @@ div.tab{
 	overflow: hidden;
 	border: 0px solid #ccc;
 	background-color: #f1f1f1;
-
+	font-size: 150%
 }
 div.tab button {
     background-color: inherit;
