@@ -1,6 +1,8 @@
 
 h1 a{
 	color: #ffffff;
+	font-family: courier;
+
 }
 
 /*
@@ -33,10 +35,9 @@ body {
 */
 
 .content {
-	margin-left: 180px;
+	margin-left: 100px;
 }
 
-/*
 .date {
 	color: #828282;
 }
@@ -44,7 +45,7 @@ body {
 .save{
 	float: right;
 }
-*/
+
 .post-form textarea, .post-form input {
 	width: 100%;
 
@@ -95,4 +96,36 @@ body {
 
 .post-detail{
 	padding-top: 130;
+}
+
+.add-comment{
+	padding-top: 130;
+}
+
+.post-list-in-detail{
+	padding-top: 100;
+	color: blue;
+	position: relative;
+}
+
+div.tab{
+	overflow: hidden;
+	border: 0px solid #ccc;
+	background-color: #f1f1f1;
+
+}
+div.tab button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    transition: 0.3s;
+}
+div.tab button:hover {
+    background-color: #ddd;
+}
+div.tab button.active {
+    background-color: #ccc;
 }

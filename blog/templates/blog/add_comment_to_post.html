@@ -1,11 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-	<h1  style="font-family: arial">{{ post.title }}</h1>
-	<h1>New comment</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Send</button>
-    </form>
-    
+	<div class="add-comment">
+		<h1  style="font-family: arial">{{ post.title }}</h1>
+		<h1>New comment</h1>
+    	<form method="POST" class="post-form">{% csrf_token %}
+       		{{ form.as_p }}
+        	<button type="submit" class="save btn btn-default">Send</button>
+    	</form>
+    </div>
 {% endblock %}
