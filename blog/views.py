@@ -100,3 +100,57 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'blog/signup.html', {'form': form})
+"""
+# for electrical views
+
+def post_list_electrical(request):
+    posts_electrical = Electrical.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list_electrical.html', {'posts_electrical':posts_electrical})
+
+def post_detail_electrical(request, pk):
+    post_electrical = get_object_or_404(Electrical, pk=pk)
+    return render(request, 'blog/post_detail_electrical.html', {'post_electrical': post_electrical})
+
+@login_required
+def post_new_electrical(request):
+    if request.method == "POST":
+        form = ElectricalForm(request.POST)
+        if form.is_valid():
+            post_electrical = form.save(commit=False)
+            post_electrical.author = request.user
+            post_electrical.published_date = timezone.now()
+            post_electrical.save()
+            return redirect('post_detail_electrical', pk=post_electrical.pk)
+    else:
+        form = ElectricalForm()
+    return render(request, 'blog/post_edit_electrical.html', {'form': form})
+
+def post_edit_electrical(request, pk):
+    post_electrical = get_object_or_404(Electrical, pk=pk)
+    if request.method == "POST":
+        form = ElectricalForm(request.POST, instance=post_electrical)
+        if form.is_valid():
+            post_electrical = form.save(commit=False)
+            post_electrical.author = request.user
+            post_electrical.save()
+            return redirect('post_detail_electrical', pk=post_electrical.pk)
+    else:
+        form = PostForm(instance=post_electrical)
+
+    return render(request, 'blog/post_edit_electrical.html', {'form': form})
+
+def post_draft_list_electrical(request):
+    posts_electrical = Electrical.objects.filter(published_date__isnull=True).order_by('created_date')
+    return render(request, 'blog/post_draft_list_electrical.html', {'posts_electrical': posts_electrical})
+
+def post_publish_electrical(request, pk):
+    post_electrical = get_object_or_404(Electrical, pk=pk)
+    post_electrical.publish()
+    return redirect('post_detail_electrical', pk=pk)
+
+def post_remove_electrical(request, pk):
+    post_electrical = get_object_or_404(Electrical, pk=pk)
+    post_electrical.delete()
+    return redirect('post_list_electrical')
+
+"""

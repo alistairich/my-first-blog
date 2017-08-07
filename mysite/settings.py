@@ -27,7 +27,7 @@ DEBUG = True
 
 LOGIN_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['192.168.254.102', 'alistairich.pythonanywhere.com']
+ALLOWED_HOSTS = ['192.168.254.100', 'alistairich.pythonanywhere.com']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'home',
     'django_wysiwyg',
     'ckeditor',
     'ckeditor_uploader',

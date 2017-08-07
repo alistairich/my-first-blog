@@ -13,7 +13,7 @@ body {
 */
 
 .page-header{
-	background-color: #6960EC;
+	background-color: #17202A;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -35,7 +35,7 @@ body {
 */
 
 .content {
-	margin-left: 100px;
+	margin-left: 160px;
 }
 
 .date {
@@ -87,45 +87,45 @@ body {
 }
 
 .new-post{
-	padding-top: 100;
+	padding-top: 50;
 	
 }
 .post-list{
-	padding-top: 100;
+	padding-top: 50;
 }
 
 .post-detail{
-	padding-top: 130;
+	padding-top: 80;
 }
 
 .add-comment{
-	padding-top: 130;
+	padding-top: 70;
 }
 
 .post-list-in-detail{
-	padding-top: 100;
+	padding-top: 50;
 	color: blue;
 	position: relative;
 }
 
-div.tab{
-	overflow: hidden;
-	border: 0px solid #ccc;
-	background-color: #f1f1f1;
-	font-size: 150%
+.logo{
+	color: #FFFFFF;
+	font-family: courier;
+	font-size: 180%;
+	font-weight: bold; 
+	padding-left: 30px;
+	padding-top: 30px;
 }
-div.tab button {
-    background-color: inherit;
-    float: right;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 2px 5px;
-    transition: 0.3s;
+.head{
+	color: #D5F5E3;
+	font-family: courier;
+	font-size: 100%;
+	padding-left: 500px;
+	font-weight: bold;
 }
-div.tab button:hover {
-    background-color: #ddd;
-}
-div.tab button.active {
-    background-color: #ccc;
+.signup{
+	padding-top: 100px;
+5
+.btn btn-default{
+	padding-top: 100px;
 }

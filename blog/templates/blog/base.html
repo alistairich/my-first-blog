@@ -10,24 +10,20 @@
     <body style="background-color: rgb(250, 250, 250)">
         <div class="page-header">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu">Add Post</span></a>
+                <a href="{% url 'post_new' %}" class="top-menu">Add Post for Math</a>
+                <a href="" class="top-menu">Add Post for Electrical</a>
                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"; title='Draft'></span></a>
                 <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu">Login</a>
                 <a href="{% url 'signup' %}" class="top-menu">Signup</a>
             {% endif %}
-            <h1 style="color: rgb(250, 250, 250);font-size: 180%; padding-left: 50; text-shadow: 2px 2px #0000A0;"><a href=""> AAC JJAA </a></h1>
-            <div class="tab">
-                <button class="tablinks" onclick="blog(topic, 'About')" style="text-shadow: 2px 2px #D1D0CE; font-family: courier;
-">About</button>
-                <button class="tablinks" onclick="blog(topic, 'Electronics')" style="text-shadow: 2px 2px #D1D0CE; font-family: courier;
-">Electronics</button>
-                <button class="tablinks" onclick="blog(topic, 'Electrical')" style="text-shadow: 2px 2px #D1D0CE; font-family: courier;
-">Electrical</button>
-                <button class="tablinks" onclick="blog(topic,'Math')" style="text-shadow: 2px 2px #D1D0CE; font-family: courier;
-"><a href="/">Mathematics</a></button>
-            </div>
+            <a class="logo" href="{% url 'post_list' %}"> AAC JJAA </a>
+            <a class="head" href=""> Home </a>
+            <a style="padding-left: 20;" class="head" href="{% url 'post_list' %}">Mathematics</a>
+            <a style="padding-left: 20;" class="head" href=""> Electrical</a>
+            <a style="padding-left: 20;" class="head" href="">Electronics</a>
+            <a style="padding-left: 20;" class="head" href="">About</a>
         </div>
         <div class="content container">
             <div class="row">
