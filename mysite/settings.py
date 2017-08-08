@@ -27,7 +27,7 @@ DEBUG = True
 
 LOGIN_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = ['192.168.254.100', 'alistairich.pythonanywhere.com']
+ALLOWED_HOSTS = ['192.168.254.101', 'alistairich.pythonanywhere.com']
 
 
 # Application definition
@@ -83,9 +83,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       	'ENGINE': 'django.db.backends.mysql',
+       	#'ENGINE': 'mysql.connector.django',
+       	'NAME': 'blog',
+       	'USER': 'jasmine',
+       	'PASSWORD': 'alistair21',
+       	'HOST': 'localhost',
+       	'PORT': '',
     }
 }
 
